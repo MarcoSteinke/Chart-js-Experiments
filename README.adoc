@@ -6,10 +6,10 @@ Basic repository to try different datasets and programmatically control Chart.js
 
 ## Future features:
 
-- methods for scaling, stretching datasets
-- maybe using some tensorflow to model stocks
-- MSE function to measure distance of a collatz series for a specific n to a certain stock
-- neural network which is able to approximate a series of factors with length of the associated collatz series to reduce MSE and model a stock
+- [ ] methods for scaling, stretching datasets
+- [ ] maybe using some tensorflow to model stocks
+- [ ] MSE function to measure distance of a collatz series for a specific n to a certain stock
+- [ ] neural network which is able to approximate a series of factors with length of the associated collatz series to reduce MSE and model a stock
 
 image::https://github.com/MarcoSteinke/Chart-js-Experiments/blob/main/screenshot.PNG?raw=true[]
 
