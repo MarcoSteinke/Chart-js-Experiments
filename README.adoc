@@ -1,15 +1,49 @@
 # 📈 Chart-js-Experiments:
 
-## 👋 Introduction:
+## 👋 1. Introduction:
 
 Basic repository to try different datasets and programmatically control Chart.js
 
 ## Future features:
 
-- [ ] methods for scaling, stretching datasets
-- [ ] maybe using some tensorflow to model stocks
-- [ ] MSE function to measure distance of a collatz series for a specific n to a certain stock
-- [ ] neural network which is able to approximate a series of factors with length of the associated collatz series to reduce MSE and model a stock
+- [ ] methods for scaling, stretching datasets (2.2)
+- [ ] MSE function to measure distance of a Collatz series for a specific n to a certain stock (2.3)
+- [ ] neural network which is able to approximate a series of factors with length of the associated Collatz series to reduce MSE and model a stock (3.1)
+- [ ] maybe using some tensorflow to model stocks (3.2)
+
+## 2. Implementation:
+
+In this section I am going to present the proccess of implementing the certain features from "Future Features".
+
+## 2.1 Methods for scaling, stretching datasets:
+
+In this project's context a dataset is a simple Collatz series. I want to offer some methods which can be used to manipulate the Collatz series as a whole.
+Thus the methods will allow the user to scale, stretch and add Collatz series.
+
+### Collatz.add(series):
+
+This method will be used to add two Collatz series element-wise. The implementation is very simple:
+
+```javascript
+add(coll) {
+  return this.result.map((datapoint, index) => datapoint + coll[index]);
+}
+```
+
+It simply maps the first series to the sum of the picked element and the element at the same index in the other series element-wise.
+
+### Usage:
+
+```javascript
+  const coll = new Collatz(41)
+  // Generate array of integers up to the length of coll
+  const integers = [...Array(coll.getResult().length).entries()].map(e => e[0])
+
+  // finally add the two series:
+  const resultSeries = coll.add(integers);
+```
+
+
 
 image::https://github.com/MarcoSteinke/Chart-js-Experiments/blob/main/screenshot.PNG?raw=true[]
 
