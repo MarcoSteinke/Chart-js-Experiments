@@ -1,20 +1,20 @@
 class ChartJSAdapter {
 
-    constructor() {
-        this.ctx = document.getElementById('myChart').getContext('2d');
+    constructor(chartDOMElementId) {
+        this.ctx = document.getElementById(chartDOMElementId).getContext('2d');
 
-        this.labels = [...Array(collatz(41).length).entries()];
+        this.labels = [...Array(new Collatz(41).getResult().length).entries()];
         this.data = {
-        labels: labels,
+        labels: this.labels,
         datasets: [{
             label: 'My First Dataset',
-            data: collatz(41),
+            data: new Collatz(41).getResult(),
             fill: false,
             borderColor: 'rgb(75, 192, 192)',
             tension: 0.1
         },{
             label: 'My First Dataset',
-            data: collatz(47),
+            data: new Collatz(47).getResult(),
             fill: false,
             borderColor: 'rgb(192, 75, 192)',
             tension: 0.1
@@ -23,13 +23,13 @@ class ChartJSAdapter {
 
         this.config = {
             type: 'line',
-            data: data,
+            data: this.data,
         };
 
-        this.myChart = new Chart(ctx, {
+        this.myChart = new Chart(this.ctx, {
             type: 'line',
-            labels: labels,
-            data: data,
+            labels: this.labels,
+            data: this.data,
             options: {
                 responsive: true,
                 scales: {
