@@ -1,0 +1,9 @@
+# 📈 Chart-js-Experiments:
+
+## 👋 Introduction:
+
+Basic repository to try different datasets and programmatically control Chart.js
+
+## ⚖ License:
+
+TBD
