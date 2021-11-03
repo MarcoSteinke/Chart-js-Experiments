@@ -4,6 +4,8 @@
 
 Basic repository to try different datasets and programmatically control Chart.js
 
+image::https://github.com/MarcoSteinke/Chart-js-Experiments/blob/main/screenshot.PNG?raw=true[]
+
 ## ⚖ License:
 
 TBD
