@@ -1,4 +1,4 @@
-# 📈 Chart-js-Experiments:
+# 📈 CollatzML:
 
 ## 👋 1. Introduction:
 
