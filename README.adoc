@@ -2,7 +2,7 @@
 
 ## 👋 1. Introduction:
 
-Basic repository to try different datasets and programmatically control Chart.js
+Using Collatz Conjectures, ML5 and Chart.js to encode stocks prices and try to use them to predict stock prices for a very short interval of time and with a low precision.
 
 ## Future features:
 
